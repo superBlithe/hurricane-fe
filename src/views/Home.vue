@@ -1,3 +1,9 @@
+<!--
+ * @Author: zhangchao
+ * @Date: 2019-10-23 17:00:51
+ * @LastEditors: zhangchao
+ * @LastEditTime: 2019-10-31 18:18:27
+ -->
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
