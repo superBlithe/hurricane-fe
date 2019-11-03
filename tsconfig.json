@@ -1,4 +1,8 @@
 {
+  "extend": [
+    "tslint:recommended",
+    "tslint-config-prettier"
+  ],
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -10,8 +14,11 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    // error TS7017: Index signature of object type implicitly has an 'any' type.
+    "noImplicitAny": false,
     "baseUrl": ".",
     "types": [
+      "node",
       "webpack-env"
     ],
     "paths": {

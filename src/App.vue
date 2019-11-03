@@ -4,6 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/index">index</router-link>
+       <el-button>默认按钮</el-button>
+       <el-input  placeholder="请输入内容"></el-input>
     </div>
     <router-view />
   </div>

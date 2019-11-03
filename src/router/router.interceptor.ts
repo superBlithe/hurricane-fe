@@ -8,7 +8,7 @@
 import { Route } from 'vue-router';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
-import { getToken } from '@/utils/auth';
+import store from '../store';
 
 import router from './index';
 
@@ -16,10 +16,10 @@ router.beforeEach((to: Route, from: Route, next: Function) => {
   NProgress.start();
   //to.meta.auth 表示需要做登录健全
   //不需要的 可以直接next
-  if (to.meta.auth) {
+  if (to.matched.some((record: any) => record.meta.requiresAuth)) {
     //store.state.token 表示已经登录 可以直接next
     //没有登录 跳转到/login 并携带参数redirect 方便登录后直接跳转到to.path
-    if (getToken()) {
+    if (store.state.token) {
       next();
     } else {
       next({
