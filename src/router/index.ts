@@ -11,7 +11,7 @@ const importByPageName = (page: String) => () =>
 const routes = [
   {
     path: '/login',
-    component: importByPageName('login'),
+    component: importByPageName('login/login'),
     hidden: true
   },
   {
